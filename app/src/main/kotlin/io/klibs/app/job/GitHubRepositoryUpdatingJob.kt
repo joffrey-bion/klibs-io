@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service
 import java.util.concurrent.TimeUnit
 
 @Component
-@ConditionalOnProperty("klibs.indexing", havingValue = "true")
+@ConditionalOnProperty("klibs.indexing", havingValue = "false")
 class GitHubRepositoryUpdatingJob(val gitHubRepositoryUpdatingService: GitHubRepositoryUpdatingService) {
 
     @Scheduled(initialDelay = 30, fixedRate = 30, timeUnit = TimeUnit.SECONDS)

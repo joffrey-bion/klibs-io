@@ -16,8 +16,8 @@ class ProcessPackageIndexRequestJob(val packageIndexingService: PackageIndexingS
     @SchedulerLock(name = "processPackageIndexRequestsLock", lockAtMostFor = "4h")
     fun processPackageIndexRequests() {
         LockAssert.assertLocked();
-        while (packageIndexingService.processPackageQueue()) {
+//        while (packageIndexingService.processPackageQueue()) {
 
-        }
+//        }
     }
 }
